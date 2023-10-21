@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "firstName": "Fernando",
+    "lastName": "Ruiz",
+    "email": "ferruiz@hotmail.com",
+    "password": "fer123",
+    "category": "admin",
+    "image": "fer.png"
+  },
+  {
+    "id": 2,
+    "firstName": "Naim Lautaro",
+    "lastName": "Apaza",
+    "email": "naimpaza@hotmail.com",
+    "password": "apaza123",
+    "category": "admin",
+    "image": "apaza.png"
+  },
+  {
+    "id": 3,
+    "firstName": "Roberto Alfredo",
+    "lastName": "",
+    "email": "robert@hotmail.com",
+    "password": "robert123",
+    "category": "admin",
+    "image": "robert.png"
+  },
+  {
+    "id": 4,
+    "firstName": "Lautaro",
+    "lastName": "Cejas",
+    "email": "lauti217@live.com",
+    "password": "lauti217",
+    "category": "admin",
+    "image": "lau.png"
+  },
+  {
+    "name": "PREBA 1",
+    "surname": "PRUEBA 1",
+    "correo": "Prueba1@gmail.com",
+    "password": "$2a$10$DJPs3jntgFSClo4Kjke2eeFS7KX81kiqmo/t7lbKp.PpDvIOVvTq2",
+    "repass": "$2a$10$DJPs3jntgFSClo4Kjke2eeFS7KX81kiqmo/t7lbKp.PpDvIOVvTq2",
+    "fotocopia": "user-1696970076345.jpg"
+  },
+  {
+    "id": 5,
+    "firstName": "usuario",
+    "lastName": "dasdasd",
+    "email": "dadasd@live.com",
+    "password": "$2a$10$lgQCflWd/oEPdBfuLbjcGuFuV2tpk94Wv2dvlAisc1D1OuqIoi0j6",
+    "repass": "$2a$10$lgQCflWd/oEPdBfuLbjcGuFuV2tpk94Wv2dvlAisc1D1OuqIoi0j6",
+    "userImage": "user-1697503934070.png"
+  },
+  {
+    "id": 6,
+    "firstName": "Prueba",
+    "lastName": "Prueba",
+    "email": "dadasdssss@live.com",
+    "password": "$2a$10$LNHH.yNYlEn1GOOIRJ3NK./ugXY/qkMf.eihhDXtcMJKw0DAOKx96",
+    "userImage": "user-1697509033020.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "otra",
+    "lastName": "prueba",
+    "email": "prueba@prueba.com",
+    "password": "$2a$10$OUDNqK2h58dmGRYtmOQ2h.7HBQ9tAZOQEeytCy84qur25ky3n3hxC",
+    "userImage": "user-1697510322314.jpg"
+  }
+]
