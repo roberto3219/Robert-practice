@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/models")
 
 let productsJSON = fs.readFileSync(
   path.join(__dirname, "../data/products.json"),

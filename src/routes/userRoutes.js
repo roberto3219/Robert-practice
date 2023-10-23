@@ -39,12 +39,7 @@ let fileUpload = multer({ storage: multerDiskStorage });
 router.get("/login", guestMiddleware, userController.login);
 router.post("/login", userController.loadLogin);
 router.get("/register", guestMiddleware, userController.register);
-router.post(
-  "/register",
-  registerValidator,
-  fileUpload.single("userImage"),
-  logUserMiddleware,
-  userController.saveRegister
+router.post("/register",registerValidator,fileUpload.single("userImage"),logUserMiddleware,userController.saveRegister
 );
 
 module.exports = router;

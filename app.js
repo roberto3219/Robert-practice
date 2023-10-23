@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const session = require('express-session')
+const cookieParser = require('cookie-parser')
 
 // Middlewares
 
@@ -15,6 +16,9 @@ const mainRoutes = require("./src/routes/mainRoutes");
 const productRoutes = require("./src/routes/productRoutes");
 const cartRoutes = require("./src/routes/cartRoutes");
 const userRoutes = require("./src/routes/userRoutes");
+//Cookie
+
+app.use(cookieParser())
 
 // Sesiones
 
@@ -30,7 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Variables
-const port = 3001;
+const port = 5580;
 
 // Servidor
 

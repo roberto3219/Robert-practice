@@ -36,11 +36,7 @@ router.get("/", productController.products);
 
 router.get("/detail/:id", productController.detail);
 router.get("/create", authMiddleware, productController.create);
-router.post(
-  "/create",
-  logProductMiddleware,
-  fileUpload.single("imagen"),
-  productController.store
+router.post( "/create",logProductMiddleware, fileUpload.single("imagen"),productController.store
 );
 router.get("/edit/:id", authMiddleware, productController.edit);
 router.put("/edit/:id", fileUpload.single("imagen"), productController.actualizar);

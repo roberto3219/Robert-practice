@@ -67,5 +67,53 @@
     "email": "prueba@prueba.com",
     "password": "$2a$10$OUDNqK2h58dmGRYtmOQ2h.7HBQ9tAZOQEeytCy84qur25ky3n3hxC",
     "userImage": "user-1697510322314.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "llamparoberto5@gmail.com",
+    "password": "$2a$10$Dv36W1wBfZlzhB4Cl2sVOev0WaATnlQQyDuvGMlU46klH3rxw/WSu",
+    "userImage": "user-1697905935516.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "llamparoberto5@gmail.com",
+    "password": "$2a$10$1ZU755xlxLwJAGac14iY7.XKqhrkrqgJrWDHumcLgTHZsM6xI/Px2",
+    "userImage": "user-1698101422373.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "llamparoberto5@gmail.com",
+    "password": "$2a$10$lPOzeRXV0XFmFu5hww5NFecx2jfL8U2zc8wkB1xxpe5vna1ns14P6",
+    "userImage": "user-1698101459536.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "llamparoberto5@gmail.com",
+    "password": "$2a$10$JY9TXvIoMMVFvTujzcjhousUVHwOYtKTWNmnCBMd7skWtksBTir3q",
+    "userImage": "user-1698101492415.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "llamparoberto5@gmail.com",
+    "password": "$2a$10$RPMbm.7u2FrtaRaJrkqQ4eAwTd4i2jFUmzUkVH0zRoCQNQ4PxJpvS",
+    "userImage": "user-1698101693975.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "osc12@gmail.com",
+    "password": "$2a$10$E7ZW0clm7ko5vbw6s0UWE.b3t5DvL9/8/4V1n94TnrltL7EgiYYsa",
+    "userImage": "user-1698102119221.jpg"
   }
 ]
