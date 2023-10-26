@@ -44,6 +44,8 @@ app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}`));
 
 app.use(methodOverride("_method"));
 
+app.use(express.json())
+
 // Configuracion de carpetas
 
 app.use(express.static("public"));

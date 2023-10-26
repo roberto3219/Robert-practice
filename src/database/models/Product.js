@@ -1,5 +1,5 @@
 module.exports= (sequelize, dataTypes) => {
-    let alias = "Juegos";
+    let alias = "Product";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -10,6 +10,10 @@ module.exports= (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: true
         },
+        precio:{
+            type:dataTypes.DECIMAL,
+            allowNull: true
+        },
         descripcion:{
             type: dataTypes.TEXT,
             allowNull: true
@@ -17,18 +21,16 @@ module.exports= (sequelize, dataTypes) => {
         descuento:{
             type: dataTypes.INTEGER,
             allowNull: false
-        }
+        }      
     }
     let config = {
         timestamps:true,
-        createdAT: 'fecha_estreno',
-        updatedAT: ' fecha_modificacion',
+        createdAt: 'fecha_estreno',
+        updatedAt: 'fecha_modificacion',
         deleteAt: false,
-        tableName: 'juegos'
+        tableName: 'product'
     }
-    const Album = sequelize.define(alias, cols, config);
-    Album.associate = function(models) {
+    const Product = sequelize.define(alias, cols, config);
 
-    } 
-    return Album  
+    return Product
 }

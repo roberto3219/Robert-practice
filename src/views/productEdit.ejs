@@ -14,7 +14,7 @@
       <div class="edit-container">
         <h1 class="edit-title">Editar</h1>
         <form
-          action="/products/edit/:id?_method=PUT"
+          action="/products/edit/<%=productsToEdit.id %>?_method=PUT"
           class="edit-form"
           method="post" 
           enctype="multipart/form-data"
@@ -38,7 +38,7 @@
               type="text"
               id="precio"
               maxlength="5"
-              value="<%= productsToEdit.price %>"
+              value="<%= productsToEdit.precio %>"
               name="precio"
               placeholder="Introduzca el valor del juego..."
               required
@@ -51,7 +51,7 @@
               class="input"
               type="text"
               name="descuento"
-              value="<%= productsToEdit.discount %>"
+              value="<%= productsToEdit.descuento %>"
               placeholder="Introduzca el descuento (opcional)"
             />
           </div>
@@ -81,11 +81,11 @@
             <textarea
               required
               id="detalle"
-              name="detalle"
+              name="descripcion"
               cols="30"
               rows="10"
               placeholder="Introduzca una descripcion del juego.."
-            ><%= productsToEdit.description %></textarea>
+            ><%= productsToEdit.descripcion %></textarea>
           </div>
           <button class="editar-button" type="submit">Editar</button>
         </form>
