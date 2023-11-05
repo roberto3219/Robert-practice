@@ -22,6 +22,7 @@ const controller = {
         res.render("error404")
       })
   },
+  
 };
 
 module.exports = controller

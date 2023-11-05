@@ -8,58 +8,72 @@
         <i class="fa-solid fa-arrow-left-long"></i>
       </a>
     </div>
-
     <!-- Contenido principal -->
     <main class="register-main">
       <h1 class="register-title">Registro</h1>
       <div class="register-container">
-        <div class="errores">
-          <% errores.forEach(error => { %>
-            <p class="error"><%= error.msg %></p>
-          <% }) %>
-        </div>
         <form action="/users/register"  method="POST" enctype="multipart/form-data" class="form-container">
           <input
             class="form-field"
             type="text"
             name="name"
             placeholder="Nombre/s"
-            required
+            
             maxlength="40"
+            value="<%= locals.old && old.name ? old.name : '' %>"
           />
+      <% if(locals.errors && errors.name){ %> 
+            <p class="errorsText"><%= errors.name.msg %></p>
+            <% } %> 
           <input
             class="form-field"
             type="text"
             name="lastName"
             placeholder="Apellido/s"
-            required
+            
             maxlength="40"
+            value="<%= locals.old && old.lastName ? old.lastName : '' %>"
           />
+          <% if(locals.errors && errors.lastName){ %> 
+            <p class="errorsText"><%= errors.lastName.msg %></p>
+            <% } %> 
           <input
             class="form-field"
             type="email"
             name="correo"
             placeholder="Correo electrónico"
-            required
+            
+            value="<%= locals.old && old.correo ? old.correo : '' %>"
           />
+          
+          <% if(locals.errors && errors.correo){ %> 
+            <p class="errorsTextpart"><%= errors.correo.msg %></p>
+            <% } %> 
+
             <input
             class="main-field"
             type="file"
             name="userImage"
             accept="image/*"
-            required
-          />
+            
+            />
           <legend class="info">Foto de perfil</legend>
+          <% if(locals.errors && errors.userImage){ %>
+            <p class="errorsTextpart"><%= errors.userImage.msg %></p>
+            <% } %>  
           <input
             class="main-field"
             type="password"
             name="password"
             placeholder="Contraseña"
-            required
+            
             minlength="8"
             maxlength="32"
-          />
+            />
           <legend class="info">Hasta 32 carácteres.</legend>
+          <% if(locals.errors && errors.password){ %> 
+            <p class="errorsText .part"><%= errors.password.msg %></p>
+            <% } %> 
           <input
             class="form-field"
             type="password"
@@ -67,7 +81,7 @@
             placeholder="Repita la contraseña"
             minlength="8"
             maxlength="32"
-            required
+            
           />
           <button class="send-button" type="submit">Registrarme</button>
         </form>

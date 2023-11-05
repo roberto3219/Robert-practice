@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Encabezado -->
+  <%- include('./partials/head')%>
+  <body>
+    <!-- Barra de navegacion -->
+    <%- include('./partials/header') %>
+
+    <!-- Contenido principal -->
+    <main class="product-main">
+        <section class="seccion">
+          <div class="container">
+            <% for(let i = 0; i < productos.length;i++){ %>  
+            <div class="juego-container">
+              <img class="img-juego" src="/<%=productos[i].url_img %>" alt="img-juego" />
+              <div class="desc-box">
+                <a href="/products/detail/<%=productos[i].id %> " class="titulo-juego"><%=productos[i].name %></a>
+                <% if(productos[i].descuento==0){%>
+                  <p>Sin Descuento</p>
+                  <% }else{ %>    
+                <p class="oferta"><%=productos[i].descuento %><i class="fa-solid fa-tag"></i></p>
+                <% } %>  
+                <p class="precio"><%=productos[i].precio %></p>
+              </div>
+            </div>
+            <% } %>  
+          </div>
+        </section>
+      </main>
+  
+      <!-- Footer -->
+      <%- include('./partials/footer') %>
+    </body>
+  </html>
+  

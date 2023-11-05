@@ -115,5 +115,21 @@
     "email": "osc12@gmail.com",
     "password": "$2a$10$E7ZW0clm7ko5vbw6s0UWE.b3t5DvL9/8/4V1n94TnrltL7EgiYYsa",
     "userImage": "user-1698102119221.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "osc12@gmail.com",
+    "password": "$2a$10$G/G6uQlRO0Y7EljOaxwSZuiAFEY7ATRmnrnezikWH504YqxpIhls6",
+    "userImage": "user-1698590258002.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Roberto",
+    "lastName": "Llampa",
+    "email": "osc12@gmail.com",
+    "password": "$2a$10$Sp3elB2Fl7J2pAmDOQLq7uMVVQeEImVhYbllvNxI/SY2Pm17jJJCS",
+    "userImage": "user-1698590388607.jpg"
   }
 ]

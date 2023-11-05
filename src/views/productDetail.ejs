@@ -11,23 +11,45 @@
       
       <h1 class="game-title"><%=producto.name %></h1>
       <div class="game-container">
-        <img src="/images/products/farcry.jpg" alt="juego" class="game-img" />
+        <img src="/<%=producto.url_img %>" alt="juego" class="game-img" />
         <div class="descripcion">
           <div class="tags">
-            <div class="tag play">
-              <i class="fa-brands fa-playstation"></i>
-            </div>
-            <div class="tag xbox">
-              <i class="fa-brands fa-xbox"></i>
-            </div>
-            <div class="tag pc">
-              <i class="fa-solid fa-desktop"></i>
-            </div>
+            <% if(producto.id_plataforma==3){ %> 
+              <div class="tag play">
+                <i class="fa-brands fa-playstation"></i>
+              </div>
+              <% }else if(producto.id_plataforma==2){ %>  
+              <div class="tag xbox">
+                <i class="fa-brands fa-xbox"></i>
+              </div>
+              <%} else if(producto.id_plataforma==1){ %> 
+              <div class="tag pc">
+                <i class="fa-solid fa-desktop"></i>
+              </div>
+              <%} else if(producto.id_plataforma==4){ %> 
+              <div class="tag nintendo">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <% } %> 
           </div>
           <div class="detalles">
             <h1 class="precio">$<%=producto.precio %></h1>
             <h2 class="oferta"><%=producto.descuento %>%</h2>
-            <h3 class="genero">FPS ACCIÓN AVENTURA</h3>
+           
+            <% if(producto.id_categoria==1){ %>
+              <h3 class="genero">Accion</h3>
+              <% }else if(producto.id_categoria==2){ %>
+                <h3 class="genero">Terror</h3>
+                <% }else if(producto.id_categoria==3){%>
+                  <h3 class="genero">Sexual</h3>
+                  <% }else if(producto.id_categoria==4){%>
+                    <h3 class="genero">Aventura</h3>
+                    <% }else if(producto.id_categoria==5){ %>
+                      <h3 class="genero">RPG</h3>
+                      <% }else if(producto.id_categoria==6){ %>
+                        <h3 class="genero">Lucha</h3>
+                        <% }else if(producto.id_categoria==7){ %>
+                          <% } %>     
             <p class="about-game">
               <%=producto.descripcion %>
             </p>
@@ -35,6 +57,9 @@
           <div class="buttons">
             <form action="/products/delete/<%=producto.id %>?_method=DELETE" method="post" class="delete-container">
               <button class="delete-btn" type="submit">Borrar</button>
+            </form>
+            <form action="/products/edit/<%=producto.id%>" method="get" class="delete-container">
+              <button class="delete-btn" type="submit">Editar</button>
             </form>
             <button class="carrito">
               Agregar al carrito

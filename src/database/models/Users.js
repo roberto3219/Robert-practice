@@ -4,7 +4,8 @@ module.exports = (sequelize,dataTypes) => {
         id_users:{
             type: dataTypes.INTEGER,
             primaryKey:true,
-            autoIncrement:true
+            autoIncrement:true,
+            allowNull:true
         },
         name:{
             type:dataTypes.STRING(45),
@@ -17,9 +18,15 @@ module.exports = (sequelize,dataTypes) => {
         dirreccion:{
             type:dataTypes.STRING(200),
             default:null,
+            allowNull:true,
+            unique:true,
         },
-        fecha_birthday:{
-            type:dataTypes.DATE,
+        url_img:{
+            type:dataTypes.STRING(255),
+            allowNull:true
+        },
+        password:{
+            type:dataTypes.STRING(200),
             allowNull:true
         }
     }
@@ -31,5 +38,15 @@ module.exports = (sequelize,dataTypes) => {
         tableName: 'users'
     }
     const Users = sequelize.define(alias,cols,config);
+
+        /* Users.associate = function(models){
+            Users.belongsToMany(models.Products,{
+                as:"products",
+                through:"juegos_usuarios",
+                foreignKey:"usuarios_id",
+                otherKey:"juegos_id",
+                timestamps:false
+            }) 
+        }*/
     return Users
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Encabezado -->
+<%- include('../partials/head')%>
+  <body>
+    <!-- Barra de navegacion -->
+    <%- include('../partials/header') %>
+
+    <!-- Contenido principal -->
+    <main class="product-main">
+      <section class="seccion">
+        <div class="container">
+            <%  for(let i=0 ; i < users.length;i++ ){ %>
+              <div class="user-container"> 
+              <img class="img-user" src="/<%=users[i].url_img %>" alt="">
+              <div class="box_container_user">
+            <a class="a_user" href=""><p class="name_users family_color"><%=users[i].name  %></p></a> 
+            <a class="a_user" href=""><p class="last_name family_color" ><%=users[i].last_name %></p></a> 
+            <a class="a_user" href=""><p class="correo_users family_color"><%=users[i].dirreccion %> </p></a> 
+          </div> 
+          </div> 
+            <% } %> 
+        </div> 
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
+  </body>
+</html>

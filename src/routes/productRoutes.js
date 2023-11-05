@@ -33,7 +33,6 @@ let fileUpload = multer({ storage: multerDiskStorage });
 // Ruteos
 
 router.get("/", productController.products);
-
 router.get("/detail/:id", productController.detail);
 router.get("/create", authMiddleware, productController.create);
 router.post( "/create",logProductMiddleware, fileUpload.single("imagen"),productController.store
